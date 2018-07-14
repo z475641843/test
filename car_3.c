@@ -404,7 +404,7 @@ void  main(void)
       }
     
     /********** 电机闭环控制 **********/
-if(stop_flag != 1)           //若没有停车标志位
+    if(stop_flag != 1)           //若没有停车标志位
     {
       if(key1 == 0)
       {
@@ -966,7 +966,7 @@ void cal_angle()
   //printf("all_error2=%d.%d\n", (int)all_error, abs((int)((all_error - (int)all_error)*100)));
   all_error = ( all_error / 4.5 * 0.6 + angle * 0.4 );
   forsee = (error1 * 0.8 + error5 * 0.2) / 4.5;
-  all_error = all_error * 0.9 + forsee * 0.1;
+  all_error = all_error * 1 + forsee * 0;
 //  if(all_error < 0)
 //    all_error = all_error * 1.25;
 }
